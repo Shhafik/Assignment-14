@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USD To INR</title>
+    <style>
+        div{
+            display: flex;
+        }
+        input{
+            width:150px;
+            padding:5px;
+            height:15px;
+        }
+        p{
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h2> 86.13 Indian Rupee</h2>
+    <div>
+    <input type="number"  id="ac" oninput="converttoInr()">
+    <p>Dollor</p>
+    </div>
+    <div>
+    <input type="number" id="ab">
+    <p>Rupee</p>
+    </div>  
+    <script>
+        function converttoInr() {
+            const rate = 86.13;
+            const ac = document.getElementById("ac").value;
+            const ab = ac * rate;
+            document.getElementById("ab").value = ab.toFixed(2);
+        }
+    </script>
+</body>
+</html>
